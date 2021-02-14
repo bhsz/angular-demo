@@ -1,0 +1,24 @@
+<div class="add-field-div">
+    <div class="label-input">
+        <label for="label">Field Label: </label>
+        <input type="text" name="label" (change)="handleLabelChange(fieldLabel)" [(ngModel)]="fieldLabel">
+    </div>
+
+    <div class="type-input">
+        <label for="dropdown">Field Type: </label>
+        <select name="dropdown" (change)="handleSelectChange(selectedField)" [(ngModel)]="selectedField">
+            <option [value]="field" *ngFor="let field of fieldSelections">
+                {{ field }}
+            </option>
+        </select>
+    </div>
+
+    <button class="add-field-btn" (click)="handleAddField()">
+        Add Field
+    </button>
+
+    <div class="form-field" *ngFor="let field of formFields">
+        <label for={{field.fieldLabel}}>{{ field.fieldLabel }}: </label>
+        <input type={{field.fieldType}}>
+    </div>
+</div>

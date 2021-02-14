@@ -1,0 +1,59 @@
+input, select {
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box; 
+    border: 1px solid lightgray;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    vertical-align: middle;
+}
+
+label {
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.label-input input, .type-input select {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.add-field-div {
+    text-align: center;
+}
+
+.label-input, .type-input, .form-field, .add-field-btn {
+    display: block;
+}
+
+.label-input {
+    margin: 10px 0px 10px 0px;
+}
+
+.type-input, .add-field-btn {
+    margin-bottom: 10px;
+}
+
+.add-field-btn {
+    margin: 0 auto 10px;
+    padding: 10px;
+    border: none;
+    background-color:#3F51B5;
+    color:#fff;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.add-field-btn:hover {
+    background-color:#8693db;
+}
+
+.form-field {
+    background-color: gainsboro;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid gray;
+}
