@@ -53,8 +53,8 @@ export class BuilderComponent implements OnInit {
     }
   }
 
-  // Clears the form fields.
-  handleClearFields() {
+  // Clears the form.
+  handleClearForm() {
     this.formFields = [];
   }
 
