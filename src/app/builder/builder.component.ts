@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./builder.component.css']
 })
 export class BuilderComponent implements OnInit {
+  // All of the opotions in dropdown list. 
   fieldSelections: string[] = [
     "Color",
     "Checkbox",
@@ -17,30 +18,34 @@ export class BuilderComponent implements OnInit {
     "Month",
   ];
 
+  // Default selected field in dropdown list is Checkbox.
   selectedField: string = "Checkbox";
 
   fieldLabel: string = "";
 
+  // Fields will be added into this array.
   formFields: any[] = [];
-
-  constructor() { }
 
   ngOnInit(): void {
   }
 
+  // Updates value of selectedField when the value of dropdown list is changed.
   handleSelectChange(selectedField: string) {
     this.selectedField = selectedField;
   }
 
+  // Updates value of fieldLabel when value of textfield is changed.
   handleLabelChange(fieldLabel: string) {
     this.fieldLabel = fieldLabel;
   }
 
+  // Function is called when Add Field button is clicked.
   handleAddField() {
     var newField = {
       fieldType: this.selectedField,
       fieldLabel: this.fieldLabel,
     };
+    // Add new field to formFields.
     this.formFields.push(newField);
     // Clears textfield. 
     this.fieldLabel = "";

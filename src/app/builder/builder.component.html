@@ -1,9 +1,11 @@
 <div class="add-field-div">
+    <!-- Input field for field label -->
     <div class="label-input">
         <label for="label">Field Label: </label>
         <input type="text" name="label" (change)="handleLabelChange(fieldLabel)" [(ngModel)]="fieldLabel">
     </div>
 
+    <!-- Dropdown list for field type input -->
     <div class="type-input">
         <label for="dropdown">Field Type: </label>
         <select name="dropdown" (change)="handleSelectChange(selectedField)" [(ngModel)]="selectedField">
@@ -13,10 +15,12 @@
         </select>
     </div>
 
+    <!-- Add field button -->
     <button class="add-field-btn" (click)="handleAddField()">
         Add Field
     </button>
 
+    <!-- All the added fields -->
     <div class="form-field" *ngFor="let field of formFields">
         <label for={{field.fieldLabel}}>{{ field.fieldLabel }}: </label>
         <input type={{field.fieldType}}>
