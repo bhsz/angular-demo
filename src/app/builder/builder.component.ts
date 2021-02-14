@@ -18,8 +18,8 @@ export class BuilderComponent implements OnInit {
     "Month",
   ];
 
-  // Default selected field in dropdown list is Checkbox.
-  selectedField: string = "Checkbox";
+  // Default selected field in dropdown list.
+  selectedField: string = "Color";
 
   fieldLabel: string = "";
 
@@ -41,14 +41,26 @@ export class BuilderComponent implements OnInit {
 
   // Function is called when Add Field button is clicked.
   handleAddField() {
-    var newField = {
-      fieldType: this.selectedField,
-      fieldLabel: this.fieldLabel,
-    };
-    // Add new field to formFields.
-    this.formFields.push(newField);
-    // Clears textfield. 
-    this.fieldLabel = "";
+    if (this.fieldLabel !== "") {
+      var newField = {
+        fieldType: this.selectedField,
+        fieldLabel: this.fieldLabel,
+      };
+      // Add new field to formFields.
+      this.formFields.push(newField);
+      // Clears textfield. 
+      this.fieldLabel = "";
+    }
+  }
+
+  // Clears the form fields.
+  handleClearFields() {
+    this.formFields = [];
+  }
+
+  handleDeleteField(i: number) {
+    // Removes element at index i.
+    this.formFields.splice(i, 1);
   }
 
 }

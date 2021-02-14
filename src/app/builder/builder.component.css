@@ -1,12 +1,17 @@
 input, select {
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     box-sizing: border-box; 
     border: 1px solid lightgray;
     box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
     border-radius: 10px;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="color"] {
+    padding: 0px;
+    border-radius: 0px;
+}
+
+input[type="checkbox"], input[type="radio"], input[type="color"] {
     vertical-align: middle;
 }
 
@@ -25,7 +30,7 @@ label {
     text-align: center;
 }
 
-.label-input, .type-input, .form-field, .add-field-btn {
+.label-input, .type-input, .form-field, .btn {
     display: block;
 }
 
@@ -33,11 +38,11 @@ label {
     margin: 10px 0px 10px 0px;
 }
 
-.type-input, .add-field-btn {
+.type-input, .btn {
     margin-bottom: 10px;
 }
 
-.add-field-btn {
+.btn {
     margin: 0 auto 10px;
     padding: 10px;
     border: none;
@@ -48,12 +53,23 @@ label {
     width: 100%;
 }
 
-.add-field-btn:hover {
+.btn:hover {
     background-color:#8693db;
 }
 
 .form-field {
+    position: relative;
     background-color: gainsboro;
     padding: 10px 0px 10px 0px;
     border: 1px solid gray;
+}
+
+.delete-field-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    background-color:red;
+    color:#fff;
+    font-weight: 600;
 }

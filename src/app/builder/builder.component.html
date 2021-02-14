@@ -16,13 +16,21 @@
     </div>
 
     <!-- Add field button -->
-    <button class="add-field-btn" (click)="handleAddField()">
+    <button class="btn" (click)="handleAddField()">
         Add Field
+    </button>
+    <!-- Clear fields button -->
+    <button class="btn" (click)="handleClearFields()">
+        Clear Field
     </button>
 
     <!-- All the added fields -->
-    <div class="form-field" *ngFor="let field of formFields">
+    <div class="form-field" *ngFor="let field of formFields, let i = index">
         <label for={{field.fieldLabel}}>{{ field.fieldLabel }}: </label>
         <input type={{field.fieldType}}>
+        <!-- Delete field button -->
+        <button class="delete-field-btn" (click)="handleDeleteField(i)">
+            X
+        </button>
     </div>
 </div>
