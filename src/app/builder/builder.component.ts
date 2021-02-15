@@ -55,7 +55,7 @@ export class BuilderComponent implements OnInit {
 
   // Clears the form.
   handleClearForm() {
-    this.formFields = [];
+
   }
 
   handleDeleteField(i: number) {
