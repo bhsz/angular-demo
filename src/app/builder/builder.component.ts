@@ -53,8 +53,9 @@ export class BuilderComponent implements OnInit {
     }
   }
 
-  // Clears the form.
+  // Clears the form. 
   handleClearForm() {
+    // Sets formFields to an empty array. 
     this.formFields = [];
   }
 
