@@ -28,4 +28,5 @@ Angular uses a different syntax for *onclick* as shown below.
 
 ### Answers 
 Head over to the link below for the answer of this question. 
+
 https://stackblitz.com/github/mynamenn/angular-demo/tree/complete-code
